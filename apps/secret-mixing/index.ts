@@ -58,7 +58,7 @@ export function getResult(): void {
         return;
     }
 
-    const avg = participants.reduce(function (acc: f64, p) { return acc + <f64>p.contribution }, <f64>0) / participants.length + 100;
+    const avg = participants.reduce(function (acc: f64, p) { return acc + <f64>p.contribution }, <f64>0) / participants.length;
     Notifier.sendJson<ResultOutput>({
         success: true,
         average: avg
